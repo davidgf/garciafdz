@@ -1,0 +1,141 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
+
+/* ---------------------------------------------- /*
+ * Typography
+/* ---------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+	font: 400 46px/1.2 'Montserrat', serif, sans-serif;
+	margin: 5px 0 5px;
+	color: #222;
+}
+
+h1 {
+	font-size: 64px;
+	font-weight: 700;
+	margin: 5px 0 15px;
+}
+
+h2 {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 22px;
+	text-transform: uppercase;
+	margin: 5px 0 15px;
+}
+
+h4 {
+	font-size: 16px;
+	margin: 5px 0 10px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 13px;
+}
+
+
+/* ---------------------------------------------- /*
+ * Navigation
+/* ---------------------------------------------- */
+
+.navbar {
+	background: none;
+	border-radius: 0;
+	border: 0;
+	padding: 20px 0;
+	text-transform: uppercase;
+	color: #FFF !important;
+}
+
+.navbar-custom .nav li a:hover, 
+.navbar-custom .nav li a:focus, 
+.navbar-custom .nav li.active {
+	background: none;
+	outline: 0;
+	color: #EF4836;
+}
+
+.navbar-custom .navbar-brand {
+	font: 700 18px/1.2 'Montserrat', serif, sans-serif;
+	color: #FFF;
+}
+
+.navbar-custom .navbar-nav > li.active {
+	border-bottom: 3px solid #FFF;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+	background: #FFF;
+}
+
+.navbar-custom .navbar-nav > li > a,
+.navbar-custom .navbar-nav .dropdown-menu > li > a {
+	color: #FFF;
+	font-size: 12px;
+}
+
+.navbar-color,
+.custom-collapse {
+	background: #FFF;
+	box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+	padding: 0;
+}
+
+.navbar-color .navbar-brand,
+.custom-collapse .navbar-brand,
+.navbar-color .navbar-nav > li > a,
+.navbar-color .navbar-nav .dropdown-menu > li > a,
+.custom-collapse .navbar-nav > li > a,
+.custom-collapse .navbar-nav .dropdown-menu > li > a {
+	color: #222;
+}
+
+.navbar-color .navbar-nav > li.active {
+	border-bottom: 3px solid #222;
+}
+
+.custom-collapse .navbar-nav {
+	text-align: left;
+}
+
+.custom-collapse .navbar-nav > li.active {
+	border: 0;
+}
+
+.navbar-color .navbar-toggle .icon-bar,
+.custom-collapse .navbar-toggle .icon-bar {
+	background: #222;
+}
+
+/* ---------------------------------------------- /*
+ * Intro
+/* ---------------------------------------------- */
+
+#intro {
+	padding: 260px 0 160px 0;
+	text-align: center;
+	color: #FFF;
+	background: asset-url('cover.jpg') no-repeat center center ;
+	background-size: cover;
+	text-shadow: black 0px 0px 15px;
+}
+
+#intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
+	color: #FFF;
+}
+
+.hello {
+	margin: 0 0 100px;
+}
