@@ -8,6 +8,10 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
 
+$callout-header-color: white;
+$callout-subheader-color: #c4c4c4;
+
+
 body {
 	font: 300 15px/1.6 'Raleway', serif, sans-serif;
 	color: #545454;
@@ -218,10 +222,15 @@ h6 {
  * Skills
 /* ---------------------------------------------- */
 #skills {
-	.skillset {
-		color: white;
+	.progress {
+		border-radius: 0;
+		background-clip: padding-box;
+		box-shadow: none;
 
-		h4 { color: white;}
+		.progress-bar {			
+			background-color: #869198;
+			box-shadow: none;
+		}
 	}
 }
 
@@ -242,7 +251,8 @@ h6 {
 	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
 
-	h2 { color: #C4C4C4 }
+		h3 { color: $callout-subheader-color;}
+		h2, h4 { color: $callout-header-color;}
 }
 
 .headline {
