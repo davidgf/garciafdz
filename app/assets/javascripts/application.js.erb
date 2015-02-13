@@ -15,6 +15,7 @@
 //= require jquery.backstretch.min
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require wow.min
 //= require_tree .
 
 $(function(){
@@ -24,7 +25,9 @@ $(function(){
     $('body').scrollspy({
       target: '.navbar-custom',
       offset: 50
-    })
+    });
+
+    new WOW({mobile: false}).init();
 
     $(window).scroll(function() {
         if($(this).scrollTop() >= navHeight) {
