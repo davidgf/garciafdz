@@ -243,6 +243,142 @@ h6 {
 
 
 /* ---------------------------------------------- /*
+ * Projects
+/* ---------------------------------------------- */
+
+.project-grid {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 1300px;
+  margin: 35px auto 0 auto;
+  text-align: center;
+
+  li {
+	  list-style-image: none;
+	  list-style-type: none;
+	  margin-left: 0;
+	  display: -moz-inline-stack;
+	  display: inline-block;
+	  vertical-align: middle;
+	  *vertical-align: auto;
+	  zoom: 1;
+	  *display: inline;
+	  white-space: nowrap;
+	  margin: 0 0 50px 0;
+	  text-align: left;
+	  position: relative;
+	  white-space: inherit;
+	}
+
+	figure {
+		margin: 0;
+		position: relative;
+
+		img {
+			width: 100%;
+			display: block;
+			position: relative;
+		}
+
+		.project-item-info {
+			font-weight: 300;
+
+			.sub-heading {
+				font-size: 1.1em;
+				line-height: 1;
+			}
+		}
+	}
+
+	figcaption {
+		top: 0;
+		left: 0;
+	}
+}
+
+@media screen and (max-width: 31.5em) {
+	.project-grid {
+		padding: 10px 10px 0 10px;
+	}
+}
+@media screen and (max-width: 31.5em) {
+	.project-grid li {
+		width: 100%;
+		min-width: 300px;
+	}
+}
+@media (max-width: 991px) {
+	.project-grid li {
+		display: block;
+	}
+}
+
+@media (min-width: 992px) {
+	.project-grid figure img {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 992px) {
+	.project-grid figcaption {
+		position: absolute;
+		background: rgba(210, 210, 210, 0.1);
+	}
+}
+
+@media (min-width: 992px) {
+	.project-effect-shrink figure img {
+		transition: transform 0.4s;
+		z-index: 10;
+	}
+	.project-effect-shrink figure:hover img {
+		transform: scale(0.4);
+		top: -75px;
+	}
+	.project-effect-shrink figure:hover figcaption {
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity: 1;
+		transform: scale(1);
+	}
+	.project-effect-shrink figure .project-item-info {
+		width: 100%;
+		position: absolute;
+		bottom: 5px;
+		padding-left: 20px;
+	}
+	.project-effect-shrink figure .project-item-info p {
+		font-size: 0.9em;
+		margin-bottom: 5px;
+	}
+	.project-effect-shrink figure .project-item-info a {
+		padding: 7px 12px;
+		font-size: 0.8em;
+	}
+	.project-effect-shrink figcaption {
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		opacity: 0;
+		backface-visibility: hidden;
+		transform: scale(0.7);
+		transition: transform 0.4s, opacity 0.4s;
+		height: 100%;
+		width: 100%;
+	}
+}
+/* IE Fallback */
+.ie8 .project-effect-shrink figure img {
+	z-index: 0;
+}
+.ie8 .project-effect-shrink figure .project-item-info {
+	min-height: 100px;
+	background: #000;
+	bottom: -1px;
+}
+
+
+/* ---------------------------------------------- /*
  * Timeline
 /* ---------------------------------------------- */
 .timeline {
