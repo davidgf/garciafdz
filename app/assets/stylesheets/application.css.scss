@@ -239,7 +239,7 @@ h6 {
 /* ---------------------------------------------- */
 .timeline {
     list-style: none;
-    padding: 20px 0 20px;
+    padding: 0;
     position: relative;
 
     &:before {
@@ -306,7 +306,6 @@ h6 {
 			font-size: 1.4em;
 			text-align: center;
 			position: absolute;
-			top: 16px;
 			left: 50%;
 			background-color: #999999;
 			z-index: 100;
@@ -317,6 +316,7 @@ h6 {
 		}
 
 		> .timeline-badge {
+			top: 16px;
 			width: 50px;
 			height: 50px;
 			line-height: 50px;
@@ -388,6 +388,8 @@ h6 {
     margin-top: 5px;
 }
 
+.timeline-body > .technologies { margin-top: 10px;}
+
 @media (max-width: 767px) {
     ul.timeline:before {
         left: 40px;
@@ -403,6 +405,12 @@ h6 {
         left: 15px;
         margin-left: 0;
         top: 16px;
+    }
+
+    ul.timeline > li > .timeline-year-badge {
+    	left: -10px;
+        margin-left: 0;
+        top: 16px;	
     }
 
     ul.timeline > li > .timeline-panel {
@@ -434,7 +442,7 @@ h6 {
 
 .section, .callout {
 	position: relative;
-	padding: 120px 0;
+	padding: 100px 0;
 }
 
 .section {
