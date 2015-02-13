@@ -377,6 +377,27 @@ h6 {
 	bottom: -1px;
 }
 
+/* ---------------------------------------------- /*
+ * Contact
+/* ---------------------------------------------- */
+
+#contact {
+	background: #18191a;
+	color: #FFF;
+}
+
+#contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6 {
+	color: #FFF;
+}
+
+#contact .form-control {
+	border: 0;
+}
+
+.ajax-response {
+	margin-top: 15px;
+}
+
 
 /* ---------------------------------------------- /*
  * Timeline
@@ -601,6 +622,16 @@ h6 {
 		h2, h4 { color: $callout-header-color;}
 }
 
+
+
+a {
+	color: #EF4836;
+}
+
+a:hover {
+	color: #C4C4C4;
+}
+
 .headline {
 	margin: 0 0 60px;
 }
@@ -682,4 +713,32 @@ h3 > .fa {
 	0%   { top:5px;  opacity: 0;}
 	30%  { top:10px; opacity: 1;}
 	100% { top:25px; opacity: 0;}
+}
+
+/* Button types*/
+
+.btn-default {
+	background: #EEEEEE;
+}
+
+.btn-custom-1, .btn-custom-2 {
+	background: transparent;
+	border: 2px solid #EF4836;
+	padding: 15px 25px;
+}
+
+.btn-custom-2 {
+	border: 2px solid #222;
+}
+
+.btn-custom-1:hover, .btn-custom-1:focus, .btn-custom-1:active, .btn-custom-1.active {
+	background: #EF4836;
+	border: 2px solid #EF4836;
+	color: #FFF;
+}
+
+.btn-custom-2:hover, .btn-custom-2:focus, .btn-custom-2:active, .btn-custom-2.active {
+	background: #222;
+	border: 2px solid #222;
+	color: #FFF;
 }
