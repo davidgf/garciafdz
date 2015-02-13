@@ -21,6 +21,11 @@ $(function(){
     var navbar = $('.navbar');
     var navHeight = navbar.height();
 
+    $('body').scrollspy({
+      target: '.navbar-custom',
+      offset: 50
+    })
+
     $(window).scroll(function() {
         if($(this).scrollTop() >= navHeight) {
             navbar.addClass('navbar-color');
