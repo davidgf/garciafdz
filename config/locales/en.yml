@@ -21,3 +21,44 @@
 
 en:
   hello: "Hello world"
+  sections:
+    about: "About Me"
+    skills: "Skills"
+    experience: "Experience"
+    education: "Education"
+    projects: "Projects"
+    contact: "Contact"
+  about:
+    professional_profile: "Professional Profile"
+    social_profiles: "Social Profiles"
+    text1: "As a software developer, along my career I have worked with several programming languages and technologies, building from web projects or data scrapping in Python, to mobile apps for Android and iOS using Phonegap, HTML5 and JavaScript. During the past year I have been the manager of a company in the industrial sector, carrying out tasks of accounting, treasury and systems administration, among others. Nevertheless, I've always been in touch with the latest technologies and have also developed several personal web projects, primarily using Ruby On Rails."
+    text2: "Among the tools that I have worked with, it's worth mentioning jQuery, Backbone.js, Celery, Django, Sidekiq, CouchDB or Bootstrap."
+  skills: 
+    technical_skills: "Technical Skills"
+    os: "Preferred OS"
+    os_text: "UNIX based operating systems like:"
+    languages: "Languages"
+    langs:
+      spanish: "Spanish"
+      portuguese: "Portuguese"
+      english: "English"
+      galician: "Galician"
+      level:
+        basic: "Basic"
+        advanced: "Advanced"
+        native: "Native"
+  experience:
+    manager: "Manager"
+    soft_eng: "Software Engineer"
+    consultant: "Consultant"
+    intern: "Intern"
+    to_date: "to date"
+    r: "Web development in JSP and systems administration"
+    nfq: "Design and construction of several developments in Unix shell scripting for a project to Back Office Treasury of BBVA"
+    trident: "Analysis, design and development of a web based application for the pharmaceutical sector."
+    trinquel: "Analysis, design and development of a mobile application for iPhone and Android devices."
+    trescatorce: "Analysis, design and development of web and mobile applications, both web based and native, for the e-book industry."
+    ferganova: "Manager of industrial company, performing tasks of accounting, treasury, Autocad drawing and systems administrator, among others."
+    country:
+      spain: "Spain"
+      ireland: "Ireland"

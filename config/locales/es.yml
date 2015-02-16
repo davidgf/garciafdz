@@ -1,0 +1,63 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+es:
+  sections:
+    about: "Sobre Mi"
+    skills: "Habilidades"
+    experience: "Experiencia"
+    education: "Educación"
+    projects: "Proyectos"
+    contact: "Contacto"
+  about:
+    professional_profile: "Perfil Profesional"
+    social_profiles: "Perfiles Sociales"
+    text1: "Como desarrollador de software, durante mi carrera profesional he trabajado con diversos lenguajes y tecnologías. Desde proyectos web o de extracción de datos en Python, hasta desarrollo de Apps móviles para Android e iOS usando Phonegap, HTML5 y JavaScript. Durante el último año he sido el administrador de una empresa del sector industrial, llevando a cabo tareas de contabilidad, tesorería o administración de sistemas, entre muchas otras. Pese a ello, nunca he dejado de estar en contacto con las últimas tecnologías y también he desarrollado varios proyectos web propios, usando Ruby On Rails primordialmente."
+    text2: "Entre las herramientas con las que he trabajado, se encuentran jQuery, Backbone.js, Celery, Django, Sidekiq, CouchDB o Bootstrap."
+  skills:
+    technical_skills: "Habilidades Técnicas"
+    os: "Sistemas Operativos"
+    os_text: "Sistemas operativos basados en UNIX como:"
+    languages: "Idiomas"
+    langs:
+      spanish: "Español"
+      portuguese: "Portugués"
+      english: "Inglés"
+      galician: "Gallego"
+      level:
+        basic: "Básico"
+        advanced: "Avanzado"
+        native: "Nativo"
+  experience:
+    manager: "Administrador"
+    soft_eng: "Ingeniero de Software"
+    consultant: "Consultor"
+    intern: "Becario"
+    to_date: "hasta fecha"
+    r: "Desarrollo web en JSP y administración de sistemas"
+    nfq: "Diseño y construcción de diversos desarrollos en Unix shell scripting para un proyecto de Back Office de Tesorería de BBVA"
+    trident: "Análisis, diseño y desarrollo de una aplicación web para el sector farmacéutico."
+    trinquel: "Análisis, diseño y desarrollo de una aplicación móvil para dispositivos iPhone y Android."
+    trescatorce: "Análisis, diseño y desarrollo de una aplicación web y móvil, tanto web como nativa, para el sector del e-book."
+    ferganova: "Administrados de una empresa industrial, realizando tareas de contabilidad, tesorería, diseño de planos en Autocad y administrador de sistemas, entre otros."
+    country:
+      spain: "España"
+      ireland: "Irlanda"

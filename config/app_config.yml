@@ -1,0 +1,8 @@
+smtp_password: Naturales1
+smtp_host: smtp.1and1.es
+smtp_port: 587
+smtp_username: david@garciafdz.com
+smtp_domain: garciafdz.com
+default_url: garciafdz.com
+
+mail_sender: david@garciafdz.com
