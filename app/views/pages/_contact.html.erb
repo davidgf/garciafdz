@@ -21,27 +21,28 @@
 
             <div class="col-md-6">
 
-                <form id="contact-form" role="form">
-
-                    <div class="form-group">
-                        <label class="sr-only" for="c_name">Name</label>
-                        <input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="sr-only" for="c_email">Email address</label>
-                        <input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
-                    </div>
-
-                    <div class="form-group">
-                        <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-custom-1">
+                <%= form_tag({controller: 'pages', action: 'contact'}, method: :post, class: "form-horizontal", role: "form", id: "contact-form") do |f| %>
+                  <%= fields_for :message do |ff| %>
+                      <div class="form-group">
+                        <%= ff.label :name, "Nombre", class: 'sr-only' %>
+                        <%= ff.text_field :name, class: 'form-control', placeholder: 'Nombre' %>
+                      </div>
+                      <div class="form-group">
+                        <%= ff.label :email, "Email", class: 'sr-only' %>
+                          <%= ff.text_field :email, type: "email", class: 'form-control', placeholder: 'Email' %>
+                      </div>
+                      <div class="form-group">
+                        <%= ff.label :content, 'Mensaje', class: 'sr-only' %>
+                        <%= ff.text_area :content, class: 'form-control', placeholder: 'Mensaje', rows: 7 %>
+                      </div>
+                      
+                      <%= button_tag(type: 'submit', class: "btn btn-custom-1") do %>
                         <i class="fa fa-bullhorn icon-before"></i> Send it
-                    </button>
+                      <% end %>
 
-                </form>
+
+                  <% end %>
+                <% end %>
 
                 <div class="ajax-response"></div>
 

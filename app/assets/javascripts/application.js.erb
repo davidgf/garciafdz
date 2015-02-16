@@ -81,12 +81,12 @@ $(function(){
     $("#contact-form").submit(function(e) {
       e.preventDefault();
 
-      var c_name = $("#c_name").val();
-      var c_email = $("#c_email").val();
-      var c_message = $("#c_message ").val();
+      var name = $("#message_name").val();
+      var email = $("#message_email").val();
+      var message = $("#message_content ").val();
       var responseMessage = $('.ajax-response');
 
-      if (( c_name== "" || c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
+      if (( name== "" || email == "" || message == "") || (!isValidEmailAddress(email) )) {
         responseMessage.fadeIn(500);
         responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
       }
@@ -94,20 +94,16 @@ $(function(){
       else {
         $.ajax({
           type: "POST",
-          url: "assets/php/contactForm.php",
+          url: $(this).attr('action'),
           dataType: 'json',
-          data: {
-            c_email: c_email,
-            c_name: c_name,
-            c_message: c_message
-          },
+          data: $(this).serialize(),
           beforeSend: function(result) {
             $('#contact-form button').empty();
             $('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
           },
           success: function(result) {
-            if(result.sendstatus == 1) {
-              responseMessage.html(result.message);
+            if(result.ok) {
+              responseMessage.html("Thanks for contacting me!");
               responseMessage.fadeIn(500);
               $('#contact-form').fadeOut(500);
             } else {
@@ -120,8 +116,6 @@ $(function(){
         }).fail(function(){
               $('#contact-form button').empty();
               $('#contact-form button').append('<i class="fa fa-retweet"></i> Try again.');
-              responseMessage.html(result.message);
-              responseMessage.fadeIn(1000);
         });
       }
 
