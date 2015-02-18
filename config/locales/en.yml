@@ -32,7 +32,7 @@ en:
     professional_profile: "Professional Profile"
     social_profiles: "Social Profiles"
     text1: "As a software developer, along my career I have worked with several programming languages and technologies, building from web or data scrapping projects in Python, to mobile apps for Android and iOS using Phonegap, HTML5 and JavaScript. During the past year I have been the manager of a company in the industrial sector, carrying out tasks of accounting, treasury and systems administration, among others. Nevertheless, I've always been in touch with the latest technologies and have also developed several personal web projects, primarily using Ruby On Rails."
-    text2: "Among the tools that I have worked with, it's worth mentioning jQuery, Backbone.js, Celery, Django, Sidekiq, CouchDB or Bootstrap."
+    text2: "Among the tools that I have worked with, it's worth mentioning jQuery, Backbone.js, Celery, Django, Sidekiq, CouchDB, Capistrano or Bootstrap."
   skills: 
     technical_skills: "Technical Skills"
     os: "Preferred OS"
