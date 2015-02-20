@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" >
-				<h2>Projects</h2>
+				<h2><%= t :projects, scope: :sections %></h2>
 			</div>
 		</div>
 
@@ -15,23 +15,27 @@
 							<div class="project-item-info">
 								<h3 class="sub-heading">Faceboda</h3>
 								<p>
-									Private social network for weddings, where any guest can upload pictures, post messages, choose dancing partner, suggest songs, and much more.
+									<%= t :faceboda, scope: :projects %>
 								</p>
-								<a href="#" class="btn btn-default">Visit Webpage</a>
+								<a href="#" class="btn btn-default">
+									<%= t :visit, scope: :projects %>
+								</a>
 							</div>
 						</figcaption>
 					</figure>
 				</li>
 				<li class="col-md-6">
 					<figure>
-						<%= image_tag "droplayer.jpg", class: "img-responsive", alt: "Droplayer", title: "droplayer.es" %>
+						<%= image_tag "droplayer.jpg", class: "img-responsive", alt: "Droplayer", title: "streamr.es" %>
 						<figcaption>
 							<div class="project-item-info">
-								<h3 class="sub-heading">Droplayer</h3>
+								<h3 class="sub-heading">Streamr</h3>
 								<p>
-									Web audio player for Dropbox. Link your Dropbox account with Droplayer and stream your music to any device. Droplayer gets the music data, so you can browse your library by song title, artist or album.
+									<%= t :streamr, scope: :projects %>
 								</p>
-								<a href="#" class="btn btn-default">Visit Webpage</a>
+								<a href="#" class="btn btn-default">
+									<%= t :visit, scope: :projects %>
+								</a>
 							</div>
 						</figcaption>
 					</figure>

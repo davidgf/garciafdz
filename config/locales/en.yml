@@ -29,6 +29,8 @@ en:
     projects: "Projects"
     contact: "Contact"
   about:
+    hi: "Hello, I'm David García"
+    soft_dev: "Software Developer."
     professional_profile: "Professional Profile"
     social_profiles: "Social Profiles"
     text1: "As a software developer, along my career I have worked with several programming languages and technologies, building from web or data scrapping projects in Python, to mobile apps for Android and iOS using Phonegap, HTML5 and JavaScript. During the past year I have been the manager of a company in the industrial sector, carrying out tasks of accounting, treasury and systems administration, among others. Nevertheless, I've always been in touch with the latest technologies and have also developed several personal web projects, primarily using Ruby On Rails."
@@ -62,3 +64,22 @@ en:
     country:
       spain: "Spain"
       ireland: "Ireland"
+  education:
+    rhel: "Red Hat System Administrator"
+    rhel_text: "Red Hat system administrator 80 hour course, after which I obtained the "
+    rhel_text_important: "certification Red Hat Certified System Administrator (RHCSA)"
+    english: "General English"
+    java: "Java Programming. OO Analysis with UML"
+    java_text: "80 hours Java training comprised of three official courses: Java Programming (SL-275-SE6), Object-Oriented Analysis and Design Using UML (OO-226) and Developing Applications With the Java SE 6 Platform (SL-285-SE6)"
+    degree: "BS in Computer Science"
+  projects:
+    faceboda: "Private social network for weddings, where any guest can upload pictures, post messages, choose dancing partner, suggest songs, and much more."
+    streamr: "Web audio player for Dropbox. Link your Dropbox account with Droplayer and stream your music to any device. Droplayer gets the music data, so you can browse your library by song title, artist or album."
+    visit: "Visit Webpage"
+  contact:
+    drop: "Drop me a line. I love to hear you."
+    fill: "Fill the form or send an email."
+    name: "Name"
+    email: "Email"
+    message: "Message"
+    send: "Send"
