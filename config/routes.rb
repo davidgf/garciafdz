@@ -1,6 +1,7 @@
 Garciafdz::Application.routes.draw do
   get "pages/home"
   post "pages/contact"
+  get ':company' => 'pages#cover_letter'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
