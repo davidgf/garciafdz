@@ -1,5 +1,5 @@
 <%= render "header" %>
-<%= render "pages/cover_letters/#{params[:company]}" %>
+<%= render "pages/cover_letters/#{params[:company]}" rescue nil%>
 <%= render "about" %>
 <%= render "skills" %>
 <%= render "experience" %>
