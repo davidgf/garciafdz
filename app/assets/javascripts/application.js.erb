@@ -17,6 +17,10 @@
 //= require wow.min
 //= require_tree .
 
+$(document).on('page:load', function() {
+  $(document).trigger('ready');
+});
+
 $(function(){
     var navbar = $('.navbar');
     var navHeight = navbar.height();
