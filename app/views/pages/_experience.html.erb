@@ -7,13 +7,33 @@
       </div>
       <ul class="timeline">
           <li class="timeline-year">
+            <div class="timeline-year-badge">201</div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-panel wow slideInRight animated">
+              <div class="timeline-heading">
+                <h4 class="timeline-title"><%= t :soft_eng, scope: :experience %></h4>
+                <p><strong>microapps S.L.</strong><small> - Málaga (<%= t :spain, scope: [:experience, :country] %>)</small>&nbsp;<small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> <%= t(:month_names, scope: :date)[3] %> 2015 - <%= t :to_date, scope: :experience %></small></p>
+                <p></p>
+              </div>
+              <div class="timeline-body">
+                <p><%= t :microapps, scope: :experience %></p>
+                <div class="row technologies">
+                  <div class="col-xs-3"><%= image_tag "rails.png", class:"img-responsive", alt: "Ruby on Rails" %></div>
+                  <div class="col-xs-3"><%= image_tag "html5.png", class:"img-responsive", alt: "HTML5" %></div>
+                  <div class="col-xs-3"><%= image_tag "aws_black.png", class:"img-responsive", alt: "AWS" %></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-year">
             <div class="timeline-year-badge">2014</div>
           </li>
           <li>
             <div class="timeline-panel wow slideInLeft animated">
               <div class="timeline-heading">
                 <h4 class="timeline-title"><%= t :manager, scope: :experience %></h4>
-                <p><strong>Ferganova S.L.</strong><small> - A Coruña (<%= t :spain, scope: [:experience, :country] %>)</small>&nbsp;<small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> <%= t(:month_names, scope: :date)[1] %> 2014 - <%= t :to_date, scope: :experience %></small></p>
+                <p><strong>Ferganova S.L.</strong><small> - A Coruña (<%= t :spain, scope: [:experience, :country] %>)</small>&nbsp;<small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> <%= t(:month_names, scope: :date)[1] %> 2014 - <%= t(:month_names, scope: :date)[3] %> 2015</small></p>
                 <p></p>
               </div>
               <div class="timeline-body">

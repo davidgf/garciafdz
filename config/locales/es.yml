@@ -32,7 +32,7 @@ es:
     soft_dev: "Desarrollador de Software."
     professional_profile: "Perfil Profesional"
     social_profiles: "Perfiles Sociales"
-    text1: "Como desarrollador de software, durante mi carrera profesional he trabajado con diversos lenguajes y tecnologías. Desde proyectos web o de extracción de datos en Python, hasta desarrollo de Apps móviles para Android e iOS usando Phonegap, HTML5 y JavaScript. Durante el último año he sido el administrador de una empresa del sector industrial, llevando a cabo tareas de contabilidad, tesorería o administración de sistemas, entre muchas otras. Pese a ello, nunca he dejado de estar en contacto con las últimas tecnologías y también he desarrollado varios proyectos web propios, usando Ruby On Rails primordialmente."
+    text1: "Como desarrollador de software, durante mi carrera profesional he trabajado con diversos lenguajes y tecnologías. Desde proyectos web o de extracción de datos en Ruby on Rails o Python, hasta desarrollo de Apps móviles para Android e iOS usando Phonegap, HTML5 y JavaScript. Actualmente, mi labor se enfoca al desarrollo de aplicaciones para la plataforma de e-commerce Shopify, así como soluciones de mail marketing y pagos electrónicos."
     text2: "Entre las herramientas con las que he trabajado, se encuentran jQuery, Backbone.js, Celery, Django, Sidekiq, CouchDB, Capistrano o Bootstrap."
   skills:
     technical_skills: "Habilidades Técnicas"
@@ -60,6 +60,7 @@ es:
     trinquel: "Análisis, diseño y desarrollo de una aplicación móvil para dispositivos iPhone y Android."
     trescatorce: "Análisis, diseño y desarrollo de una aplicación web y móvil, tanto web como nativa, para el sector del e-book."
     ferganova: "Administrador de una empresa industrial, realizando tareas de contabilidad, tesorería, diseño de planos en Autocad y administrador de sistemas, entre otros."
+    microapps: "Desarrollo y mantenimiento de aplicaciones para la plataforma de e-commerce Shopify. Desarrollo de proyectos web en Ruby on Rails."
     country:
       spain: "España"
       ireland: "Irlanda"
