@@ -1,0 +1,117 @@
+<section id="skills" class="callout">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" >
+				<h2 class="text-center visible-xs visible-sm"><%= t :skills, scope: :sections %></h2>
+				<h2 class="hidden-xs hidden-sm"><%= t :skills, scope: :sections %></h2>
+			</div>
+
+			<div class="col-md-9 col-sm-12 skillset wow bounceInUp animated" >
+				<h3 class="hidden-xs hidden-sm"><%= t :technical_skills, scope: :skills %></h3>
+				<h3 class="text-center visible-xs visible-sm"><%= t :technical_skills, scope: :skills %></h3>
+				<div class="row text-center">
+					<div class="col-md-2 col-sm-4">					
+						<%= image_tag "rails.png", class: "img-responsive center-block" %>				
+						<h4>Ruby On Rails</h4>
+					</div>
+					<div class="col-md-2 col-sm-4">					
+						<%= image_tag "python.png", class: "img-responsive center-block" %>				
+						<h4>Python</h4>
+					</div>
+					<div class="col-md-2 col-sm-4">					
+						<%= image_tag "js.png", class: "img-responsive center-block" %>				
+						<h4>JavaScript</h4>
+					</div>
+					<div class="col-md-2 col-sm-4">					
+						<%= image_tag "html5.png", class: "img-responsive center-block" %>				
+						<h4>HTML5</h4>
+					</div>
+					<div class="col-md-2 col-sm-4">					
+						<%= image_tag "aws.png", class: "img-responsive center-block" %>				
+						<h4>AWS</h4>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-3">
+						<i class="fa fa-check"></i>&nbsp;jQuery/jQuery Mobile
+					</div>
+					<div class="col-md-2">
+						<i class="fa fa-check"></i>&nbsp;Phonegap
+					</div>
+					<div class="col-md-3">
+						<i class="fa fa-check"></i>&nbsp;Backbone.js
+					</div>
+					<div class="col-md-2">
+						<i class="fa fa-check"></i>&nbsp;Git
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-12 text-center wow bounceInRight animated">
+				<h3><%= t :os, scope: :skills %></h3>
+				<div class="row">
+					<%= t :os_text, scope: :skills %> 
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<%= image_tag "ubuntu.png", class: "img-responsive center-block" %>
+						<h4>Ubuntu</h4>
+					</div>
+					<div class="col-xs-6">
+						<%= image_tag "osx.png", class: "img-responsive center-block" %>
+						<h4>OSx</h4>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3 col-sm-12 text-center wow bounceInLeft animated">
+				<h3><%= t :languages, scope: :skills %></h3>
+				<div class="row">
+					<div class="col-xs-4">
+						<%= t :spanish, scope: [:skills, :langs] %>
+					</div>
+					<div class="col-xs-8">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+								<%= t :native, scope: [:skills, :langs, :level] %>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<%= t :galician, scope: [:skills, :langs] %>
+					</div>
+					<div class="col-xs-8">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+								<%= t :native, scope: [:skills, :langs, :level] %>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<%= t :english, scope: [:skills, :langs] %>
+					</div>
+					<div class="col-xs-8">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+								<%= t :advanced, scope: [:skills, :langs, :level] %>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<%= t :portuguese, scope: [:skills, :langs] %>
+					</div>
+					<div class="col-xs-8">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+								<%= t :basic, scope: [:skills, :langs, :level] %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section>

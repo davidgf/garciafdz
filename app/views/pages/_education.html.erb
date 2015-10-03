@@ -1,0 +1,68 @@
+<section id="education" class="section"> 
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12 headline">
+          <h2><%= t :education, scope: :sections %></h2>
+        </div>
+      </div>
+      <ul class="timeline">
+          <li class="timeline-year">
+            <div class="timeline-year-badge">2012</div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-panel wow slideInRight animated">
+              <div class="timeline-heading">
+                <h4 class="timeline-title"><%= t :rhel, scope: :education %></h4>
+                <p><strong>EduStance (Red Hat official partner)</strong>&nbsp;<small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2012   - February 2012</small></p>
+              </div>
+              <div class="timeline-body">
+                <p>
+                  <%= t :rhel_text, scope: :education %><strong><%= t :rhel_text_important, scope: :education %></strong>
+                </p>
+                <div class="row technologies">
+                  <div class="col-xs-5"><%= image_tag "rchsa.png", class:"img-responsive", alt: "Red Hat Certified System Administrator" %></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-year">
+            <div class="timeline-year-badge">2011</div>
+          </li>
+          <li>
+            <div class="timeline-panel wow slideInLeft animated">
+              <div class="timeline-heading">
+                <h4 class="timeline-title"><%= t :english, scope: :education %></h4>
+                <p><strong>Liverpool School of English</strong>&nbsp;<small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> January 2011 - March 2011</small></p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-year">
+            <div class="timeline-year-badge">2009</div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-panel wow slideInRight animated">
+              <div class="timeline-heading">
+                <h4 class="timeline-title"><%= t :java, scope: :education %></h4>
+                <p><strong>Sun Microsystems</strong>&nbsp;<small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> October 2009 - November 2009</small></p>
+              </div>
+              <div class="timeline-body">
+                <p><%= t :java_text, scope: :education %></p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-year">
+            <div class="timeline-year-badge">2005</div>
+          </li>
+          <li>
+            <div class="timeline-badge"><i class="fa fa-graduation-cap"></i></div>
+            <div class="timeline-panel wow slideInLeft animated">
+              <div class="timeline-heading">
+                <h4 class="timeline-title"><%= t :degree, scope: :education %></h4>
+                <p><strong>A Coruña University</strong>&nbsp;<small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> 2005 - 2010</small></p>
+              </div>
+              </div>
+            </div>
+          </li>
+      </ul>
+  </div>
+</section>

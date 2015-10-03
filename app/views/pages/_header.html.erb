@@ -1,0 +1,54 @@
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nabvar-options">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#intro">David García</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="nabvar-options">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li class="active"><a href="#intro">home</a></li> -->
+                <li class=""><a href="#about"><%= t :about, scope: :sections %></a></li>
+                <li class=""><a href="#skills"><%= t :skills, scope: :sections %></a></li>
+                <li class=""><a href="#experience"><%= t :experience, scope: :sections %></a></li>
+                <li class=""><a href="#education"><%= t :education, scope: :sections %></a></li>
+                <li class=""><a href="#projects"><%= t :projects, scope: :sections %></a></li>
+                <li class=""><a href="#contact"><%= t :contact, scope: :sections %></a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<section id="intro" class="section" >
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="hello" >
+                    <h1><%= t :hi, scope: :about %></h1>
+                    <h3><span><%= t :soft_dev, scope: :about %></span></h3>
+                </div>
+
+                <a href="#about">
+                    <div class="mouse-icon">
+                        <div class="wheel"></div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div><!-- .row -->
+
+    </div><!-- .container -->
+</section>

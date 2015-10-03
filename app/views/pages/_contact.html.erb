@@ -1,0 +1,55 @@
+<section id="contact" class="section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12 headline wow bounceInLeft animated" style="visibility: visible; -webkit-animation: bounceInLeft;">
+                <h2><%= t(:contact, scope: :sections) %></h2>
+                <p><%= t(:drop, scope: :contact) %></p>
+            </div>
+
+            <div class="col-md-6 wow bounceInUp animated" style="visibility: visible; -webkit-animation: bounceInUp;">
+
+                <p><%= t(:fill, scope: :contact) %></p>
+
+                <ul class="icon-list">
+                    <li><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:david@garciafdz.com">david@garciafdz.com</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <%= form_tag({controller: 'pages', action: 'contact'}, method: :post, class: "form-horizontal", role: "form", id: "contact-form") do |f| %>
+                  <%= fields_for :message do |ff| %>
+                      <div class="form-group">
+                        <%= ff.label :name, t(:name, scope: :contact), class: 'sr-only' %>
+                        <%= ff.text_field :name, class: 'form-control', placeholder: t(:name, scope: :contact) %>
+                      </div>
+                      <div class="form-group">
+                        <%= ff.label :email, t(:email, scope: :contact), class: 'sr-only' %>
+                          <%= ff.text_field :email, type: "email", class: 'form-control', placeholder: t(:email, scope: :contact) %>
+                      </div>
+                      <div class="form-group">
+                        <%= ff.label :content, t(:message, scope: :contact), class: 'sr-only' %>
+                        <%= ff.text_area :content, class: 'form-control', placeholder: t(:message, scope: :contact), rows: 7 %>
+                      </div>
+                      
+                      <%= button_tag(type: 'submit', class: "btn btn-custom-1") do %>
+                        <i class="fa fa-bullhorn icon-before"></i> <%= t(:send, scope: :contact) %>
+                      <% end %>
+
+
+                  <% end %>
+                <% end %>
+
+                <div class="ajax-response"></div>
+
+            </div>
+
+        </div><!-- .row -->
+
+    </div><!-- .container -->
+
+</section>

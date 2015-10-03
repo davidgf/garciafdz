@@ -1,0 +1,46 @@
+<section id="projects" class="callout">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" >
+				<h2><%= t :projects, scope: :sections %></h2>
+			</div>
+		</div>
+
+		<div class="row project-list">
+			<ul class="project-grid project-effect-shrink">
+				<li class="col-md-6">
+					<figure>
+						<%= image_tag "faceboda.jpg", class: "img-responsive", alt: "elEnlace.de", title: "elEnlace.de" %>
+						<figcaption>
+							<div class="project-item-info">
+								<h3 class="sub-heading">elEnlace</h3>
+								<p>
+									<%= t :faceboda, scope: :projects %>
+								</p>
+								<a href="http://elenlace.de" class="btn btn-default">
+									<%= t :visit, scope: :projects %>
+								</a>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li class="col-md-6">
+					<figure>
+						<%= image_tag "droplayer.jpg", class: "img-responsive", alt: "Droplayer", title: "streamr.es" %>
+						<figcaption>
+							<div class="project-item-info">
+								<h3 class="sub-heading">Streamr</h3>
+								<p>
+									<%= t :streamr, scope: :projects %>
+								</p>
+								<a href="http://streamr.es" class="btn btn-default">
+									<%= t :visit, scope: :projects %>
+								</a>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

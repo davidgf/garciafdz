@@ -1,0 +1,122 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+//
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require wow.min
+//= require_tree .
+
+$(document).on('page:change', function(){
+    var navbar = $('.navbar');
+    var navHeight = navbar.height();
+
+    $('body').scrollspy({
+      target: '.navbar-custom',
+      offset: 50
+    });
+
+    new WOW({mobile: false}).init();
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() >= navHeight) {
+            navbar.addClass('navbar-color');
+        }
+        else {
+            navbar.removeClass('navbar-color');
+        }
+    });
+
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+              $('html,body').animate({
+                  scrollTop: target.offset().top -10
+              }, 1000);
+              // return false;
+          }
+      }
+    });    
+
+    $(document).on('click','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+            $(this).collapse('hide');
+        }
+    });
+
+    if($(window).width() <= 767) {
+        navbar.addClass('custom-collapse');
+    }
+
+    $(window).resize(function() {
+        if($(this).width() <= 767) {
+            navbar.addClass('custom-collapse');
+        }
+        else {
+            navbar.removeClass('custom-collapse');
+        }
+    });
+
+    function isValidEmailAddress(emailAddress) {
+      var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+      return pattern.test(emailAddress);
+    };
+
+    $("#contact-form").submit(function(e) {
+      e.preventDefault();
+
+      var name = $("#message_name").val();
+      var email = $("#message_email").val();
+      var message = $("#message_content ").val();
+      var responseMessage = $('.ajax-response');
+
+      if (( name== "" || email == "" || message == "") || (!isValidEmailAddress(email) )) {
+        responseMessage.fadeIn(500);
+        responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
+      }
+
+      else {
+        $.ajax({
+          type: "POST",
+          url: $(this).attr('action'),
+          dataType: 'json',
+          data: $(this).serialize(),
+          beforeSend: function(result) {
+            $('#contact-form button').empty();
+            $('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+          },
+          success: function(result) {
+            if(result.ok) {
+              responseMessage.html("Thanks for contacting me!");
+              responseMessage.fadeIn(500);
+              $('#contact-form').fadeOut(500);
+            } else {
+              $('#contact-form button').empty();
+              $('#contact-form button').append('<i class="fa fa-retweet"></i> Try again.');
+              responseMessage.html(result.message);
+              responseMessage.fadeIn(1000);
+            }
+          }
+        }).fail(function(){
+              $('#contact-form button').empty();
+              $('#contact-form button').append('<i class="fa fa-retweet"></i> Try again.');
+        });
+      }
+
+      return false;
+
+    });
+});
