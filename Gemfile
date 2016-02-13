@@ -49,6 +49,7 @@ group :development do
     gem 'capistrano-rvm'
     gem 'capistrano-bundler'
     gem 'capistrano-rails'
+    gem 'figaro'
 end
 
 # Use debugger

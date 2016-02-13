@@ -1,18 +1,16 @@
 # Load the Rails application.
 require File.expand_path('../application', __FILE__)
 
-APP_CONFIG = YAML.load(File.read(Rails.root.join("config/app_config.yml")))
-
 Garciafdz::Application.configure do
 
-  config.action_mailer.default_url_options = { :host => APP_CONFIG['default_url'] }
+  config.action_mailer.default_url_options = { :host => ENV['default_url'] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-                                        :address => APP_CONFIG['smtp_host'], 
-                                        :port => APP_CONFIG['smtp_port'],
-                                        :user_name => APP_CONFIG['smtp_username'],
-                                        :password => APP_CONFIG['smtp_password'],  
-										:authentication => "plain",  
+                                        :address => ENV['smtp_host'],
+                                        :port => ENV['smtp_port'],
+                                        :user_name => ENV['smtp_username'],
+                                        :password => ENV['smtp_password'],
+										:authentication => "plain",
 										:enable_starttls_auto => true
                                       }
 
